@@ -1,0 +1,65 @@
+# Midjourney Prompts Project
+
+## Overview
+
+This project involves the extraction, processing, and transformation of Midjourney prompts obtained from [https://prompthero.com/midjourney-prompts](https://prompthero.com/midjourney-prompts). The goal is to create a dataset suitable for training language models, specifically tailored for image generation prompts.
+
+## Project Structure
+
+The project consists of four Python scripts:
+
+1. **link_extracter.py**
+    - **Description:** Scrapes prompt links from the Midjourney prompts website using Selenium and BeautifulSoup.
+    - **Dependencies:** `csv`, `BeautifulSoup`, `selenium`
+
+2. **text_extracter.py**
+    - **Description:** Fetches text content from the extracted prompt links, considering rate-limiting and retries.
+    - **Dependencies:** `csv`, `requests`, `BeautifulSoup`, `time`, `HTTPAdapter`, `Retry`
+
+3. **addsubject.py**
+    - **Description:** Identifies main subjects in the prompts using spaCy and NLTK, then replaces placeholders with these subjects.
+    - **Dependencies:** `csv`, `spacy`, `nltk`
+
+4. **convert2json.py**
+    - **Description:** Converts the processed CSV data into a JSON format suitable for training a language model.
+    - **Dependencies:** `csv`, `json`
+
+## Usage
+
+1. **Clone the Repository:**
+    ```bash
+    git clone [repository_url]
+    cd Midjourney-Prompts-Project
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the Scripts:**
+    ```bash
+    python link_extracter.py
+    python text_extracter.py
+    python addsubject.py
+    python convert2json.py
+    ```
+
+4. **Generated Files:**
+    - `prompt_links.csv`: Contains the extracted prompt links.
+    - `partial_prompt_texts.csv`: Contains text extracted from the prompt links.
+    - `prompts_with_subject.csv`: Contains prompts with identified subjects.
+    - `prompts_with_subject.jsonl`: JSON file suitable for language model training.
+
+## Acknowledgments
+
+- The [prompthero.com](https://prompthero.com) website for providing the Midjourney prompts.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Note:** Make sure to replace `[repository_url]` with the actual URL of your repository.
+
