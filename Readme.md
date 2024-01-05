@@ -51,6 +51,14 @@ The project consists of four Python scripts:
     - `prompts_with_subject.csv`: Contains prompts with identified subjects.
     - `prompts_with_subject.jsonl`: JSON file suitable for language model training.
 
+## Hugging Face Dataset Card
+
+Explore the dataset on Hugging Face: [Midjourney Art Prompts](https://huggingface.co/datasets/mshojaei77/Midjourney-Art-Prompts)
+
+## Dataset Usage
+
+The generated JSON file is specifically formatted for fine-tuning models using Hugging Face's Transformers library, such as ChatGPT. The CSV files, on the other hand, can be used for training or fine-tuning other Language Model Models (LLMs).
+
 ## Acknowledgments
 
 - The [prompthero.com](https://prompthero.com) website for providing the Midjourney prompts.
@@ -58,5 +66,3 @@ The project consists of four Python scripts:
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-
