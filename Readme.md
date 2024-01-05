@@ -1,4 +1,4 @@
-# Midjourney Prompt Scrapper
+# Midjourney Prompt Scraper
 
 ## Overview
 
