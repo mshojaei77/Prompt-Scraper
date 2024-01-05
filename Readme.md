@@ -59,7 +59,4 @@ The project consists of four Python scripts:
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
----
-
-**Note:** Make sure to replace `[repository_url]` with the actual URL of your repository.
 
